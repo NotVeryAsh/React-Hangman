@@ -48,7 +48,7 @@ export default function Game() {
         <WordPlacements wordToGuess={wordToGuess} latestGuessedLetter={latestGuessedLetter} attempts={attempts}/>
         <LetterInput updatedLatestGuessedLetter={updatedLatestGuessedLetter}/>
         <p>Attempts: {attempts}</p>
-        <p>Words Guessed: {latestGuessedLetter}</p>
+        <p>Last Guess: {latestGuessedLetter}</p>
     </div>
   );
 }
