@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Button from "./Components/Button";
+import CountInfo from "./Components/ClickInfo";
+import {useState} from "react";
 
 const data = {
     app_name: "Ash's react practice",
@@ -15,14 +17,23 @@ const userData = [
 const userNames = userData.map(user => <li key={user.id}>{user.name}</li>);
 
 function App() {
+
+  const [infoCount, setInfoCount] = useState(0);
+
+  function IncreaseInfoCount() {
+      setInfoCount(infoCount + 1);
+  }
+
   return (
     <div className="App" style={{backgroundColor: "lightblue", color: "darkslategray", padding: 10}}>
         <h1>{data.app_name}</h1>
+        <CountInfo handleClick={IncreaseInfoCount} count={infoCount}/>
         <Button />
         <Button />
         <Paragraph />
         <UserList />
         <ul>{userNames}</ul>
+        <CountInfo handleClick={IncreaseInfoCount} count={infoCount}/>
     </div>
   );
 }
