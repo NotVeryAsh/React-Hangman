@@ -38,7 +38,7 @@ export default function Game() {
       }
 
     if(attempts === maxAttempts) {
-      alert("Game Over!");
+      alert("You lost!");
     }
   }
 

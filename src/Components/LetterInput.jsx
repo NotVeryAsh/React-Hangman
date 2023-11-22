@@ -4,7 +4,8 @@ export default function LetterInput({updatedLatestGuessedLetter}) {
 
     const [textInput, setTextInput] = useState("");
 
-    function handleClick(){
+    function handleSubmit(event){
+        event.preventDefault();
         updatedLatestGuessedLetter(textInput);
     }
 
@@ -15,8 +16,10 @@ export default function LetterInput({updatedLatestGuessedLetter}) {
 
     return (
         <>
-            <input id="letter_input" type={"text"} maxLength={1} value={textInput} onChange={handleChange}></input>
-            <button onClick={handleClick}>Letter</button>
+            <form onSubmit={handleSubmit}>
+                <input id="letter_input" type={"text"} maxLength={1} value={textInput} onChange={handleChange}></input>
+                <button type="submit">Letter</button>
+            </form>
         </>
     );
 }
