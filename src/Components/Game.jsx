@@ -1,6 +1,6 @@
 import {useState} from "react";
-import WordPlacement from "./WordPlacement";
-import WordPlacements from "./WordPlacements";
+import LetterPlacement from "./LetterPlacement";
+import Board from "./Board";
 import LetterInput from "./LetterInput";
 
 const maxAttempts = 6;
@@ -45,7 +45,7 @@ export default function Game() {
   return (
     <div style={{backgroundColor: "lightblue", color: "darkslategray", padding: 10, textAlign: "center"}}>
         <h1>Game</h1>
-        <WordPlacements wordToGuess={wordToGuess} latestGuessedLetter={latestGuessedLetter} attempts={attempts}/>
+        <Board wordToGuess={wordToGuess} latestGuessedLetter={latestGuessedLetter} attempts={attempts}/>
         <LetterInput updatedLatestGuessedLetter={updatedLatestGuessedLetter}/>
         <p>Attempts: {attempts}</p>
         <p>Last Guess: {latestGuessedLetter}</p>

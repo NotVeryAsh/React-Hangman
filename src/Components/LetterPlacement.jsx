@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function WordPlacement({letterChar, latestGuessedLetter, attempts}) {
+export default function LetterPlacement({letterChar, latestGuessedLetter, attempts}) {
 
   const [letter, setLetter] = useState(letterChar);
 
